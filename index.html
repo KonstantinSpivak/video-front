@@ -17,7 +17,7 @@
             const socket = io('http://startupers.net:3000');
             // Whenever the server emits 'new message', update the chat body
             socket.on('view', (data) => {
-                $('#video').attr("src", 'data:image/png;base64, ' + data);
+                $('#video').attr("src", 'data:image/jpg;base64, ' + data);
                 // console.log(data)
             });
 
