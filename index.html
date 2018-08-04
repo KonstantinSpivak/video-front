@@ -11,7 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
     <script>
         $(function () {
-            const socket = io('http://startupers.net:3001');
+            const socket = io('http://startupers.net:3000');
             // Whenever the server emits 'new message', update the chat body
             socket.on('view', (data) => {
                 console.log(data)
