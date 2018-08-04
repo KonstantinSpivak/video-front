@@ -7,6 +7,9 @@
 </head>
 
 <body>
+    <img id="video" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUA
+        AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO
+            9TXL0Y4OHwAAAABJRU5ErkJggg==" alt="Red dot" />
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
     <script>
@@ -14,7 +17,8 @@
             const socket = io('http://startupers.net:3000');
             // Whenever the server emits 'new message', update the chat body
             socket.on('view', (data) => {
-                console.log(data)
+                $('#video').attr("src", 'data:image/png;base64, ' + data);
+                // console.log(data)
             });
 
             socket.on('disconnect', () => {
